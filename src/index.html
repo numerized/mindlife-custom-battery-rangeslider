@@ -3,14 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
+    <title>MINDLIFE BATTERY CUSTOM ELEMENT</title>
 
     <script type="module" src="/build/mindlife-custom-battery-rangeslider.esm.js"></script>
     <script nomodule src="/build/mindlife-custom-battery-rangeslider.js"></script>
   </head>
+  <style>
+    .mindlife-logo {
+      height: 50px;
+      bottom:20px;
+      right:20px;
+      position: absolute;
+    }
+    h2,
+    h1,
+    h3 {
+      margin: 0!important;
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  </style>
+
   <body>
-    <div style="height: 300px;margin-top:20px">
-      <my-component></my-component>
+    <img class="mindlife-logo" src='https://mindlife.net/MINDLIFE_Rest/uploads/1UF8kGtW/Logo%20Wth%20Tagline%20-01.png'></img>,
+    <h1>MINDLIFE BATTERY CUSTOM ELEMENT</h1>,
+    <h3>PLEASE ADJUST THE SLIDER UP AND DOWN ACCORDINGLY YOUR LEVEL OF ENERGY</h3>,
+    <div style="height: 300px; margin-top: 20px;">
+      <mindlife-battery></mindlife-battery>
     </div>
   </body>
 </html>

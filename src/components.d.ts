@@ -6,32 +6,33 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface MindlifeBattery {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLMindlifeBatteryElement extends Components.MindlifeBattery, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLMindlifeBatteryElement: {
+        prototype: HTMLMindlifeBatteryElement;
+        new (): HTMLMindlifeBatteryElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "mindlife-battery": HTMLMindlifeBatteryElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface MindlifeBattery {
+        "onSliderSlided"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "mindlife-battery": MindlifeBattery;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "mindlife-battery": LocalJSX.MindlifeBattery & JSXBase.HTMLAttributes<HTMLMindlifeBatteryElement>;
         }
     }
 }
