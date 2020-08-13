@@ -7,6 +7,7 @@ This is a custom element that lets users slide up and down a battery level with 
 The following link demonstrate how to use the project in Angular
 
 [demo](https://mindlife-ui-toolkit.web.app/components/BatterySlider)
+
 [private demo repo for authorised people](https://github.com/Mindlife-UK/mindlife-custom-uikit)
 
 # Installation
