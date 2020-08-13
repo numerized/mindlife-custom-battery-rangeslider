@@ -4,9 +4,16 @@
 
 This is a custom element that lets users slide up and down a battery level with options such as animated hint at startup or read-only (disabled) mode to just display a value.
 
+The following link demonstrate how to use the project in Angular
+
 [demo](https://mindlife-ui-toolkit.web.app/components/BatterySlider)
+[private demo repo for authorised people](https://github.com/Mindlife-UK/mindlife-custom-uikit)
 
 # Installation
+
+```bash
+npm install mindlife-custom-battery-rangeslider
+```
 
 ## Angular
 
@@ -16,12 +23,6 @@ Include the CUSTOM_ELEMENTS_SCHEMA in the modules that use the components.
 Call defineCustomElements() from main.ts (or some other appropriate place).
 
 Please read: https://stenciljs.com/docs/angular
-
-Test project: 
-
-```bash
-npm install mindlife-custom-battery-rangeslider
-```
 
 ## Usage
 
