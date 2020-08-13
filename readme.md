@@ -13,6 +13,10 @@ Using a Stencil built web component collection within an Angular CLI project is 
 Include the CUSTOM_ELEMENTS_SCHEMA in the modules that use the components.
 Call defineCustomElements() from main.ts (or some other appropriate place).
 
+Please read: https://stenciljs.com/docs/angular
+
+Test project: 
+
 ```bash
 npm install mindlife-custom-battery-rangeslider
 ```
@@ -29,7 +33,7 @@ import 'mindlife-custom-battery-rangeslider';
 
 # Events
 
-The only emitted event is the value of the slider when it moves `mindlife-battery-value`
+The only emitted event is the value of the slider when it moves `mindlife-battery-value` it will be between 0 and 100.
 
 ```
   document.addEventListener("mindlife-battery-value",(e)=>{console.log(e)})
@@ -42,7 +46,7 @@ Example
 <mindlife-battery value="40" animated-hint="true" disabled="false"></mindlife-battery>
 ```
 
-`value` is the value watched by the component at initialisation and during execution to force it to a specified value.
+`value` is the value set by the component at initialisation.
 
 `animated-hint` is a boolean value to enable the UX hint that will shake the handle of the slider to hint user that it can be moved.
 

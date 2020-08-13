@@ -92,8 +92,9 @@ export class mindlifeBattery {
     let IntFromFloat = Math.round(Number(event[0]) / 10);
     this.numFillRect = new Array(IntFromFloat).fill(IntFromFloat);
     this.numFillRect = [...this.numFillRect];
-    this.mindlifeSliderMoved.emit(IntFromFloat);
     this.percentValue = Number(Math.round(Number(event[0])).toFixed(0));
+    this.mindlifeSliderMoved.emit(this.percentValue);
+
   }
 
   setBattery(value) {
