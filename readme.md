@@ -31,7 +31,7 @@ import 'mindlife-custom-battery-rangeslider';
 ```
 
 ```[componentName].page.html
-		<mindlife-battery></mindlife-battery>
+<mindlife-battery></mindlife-battery>
 ```
 
 # Events
