@@ -17,6 +17,8 @@ Call defineCustomElements() from main.ts (or some other appropriate place).
 npm install mindlife-custom-battery-rangeslider
 ```
 
+## Usage
+
 ```app.component.ts
 import 'mindlife-custom-battery-rangeslider';
 ```
@@ -33,4 +35,8 @@ The only emitted event is the value of the slider when it moves `mindlife-batter
   document.addEventListener("mindlife-battery-value",(e)=>{console.log(e)})
 ```
 
-## Usage
+# Properties
+
+```
+<mindlife-battery value="40" animated-hint="true" disabled="false"></mindlife-battery>
+```
