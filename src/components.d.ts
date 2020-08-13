@@ -27,7 +27,7 @@ declare namespace LocalJSX {
     interface MindlifeBattery {
         "animatedHint"?: boolean;
         "disabled"?: boolean;
-        "onMindlifeSliderMoved"?: (event: CustomEvent<any>) => void;
+        "onMindlife-battery-value"?: (event: CustomEvent<any>) => void;
         "value"?: number;
     }
     interface IntrinsicElements {

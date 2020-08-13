@@ -16,7 +16,7 @@ export class mindlifeBattery {
   @Prop() disabled: boolean;
 
   @Event({
-    eventName: 'mindlifeSliderMoved',
+    eventName: 'mindlife-battery-value',
     composed: true,
     cancelable: true,
     bubbles: true,
@@ -27,7 +27,7 @@ export class mindlifeBattery {
 
   @State() numFillRect = [];
   @State() percentValue;
-  
+
   private slider;
 
   componentWillLoad() {
@@ -40,7 +40,6 @@ export class mindlifeBattery {
     this.slider = this.el.shadowRoot.querySelector('div.slider');
 
     this.disabled && this.slider.setAttribute('disabled', true);
-
 
     noUiSlider.create(this.slider, {
       start: [10],
@@ -119,13 +118,14 @@ export class mindlifeBattery {
 
   render() {
     return [
-      <h1 style={{ 'text-align': 'center' }}>{this.percentValue}%</h1>,
       <div class="container">
         <img class="battery-img" src={batteryImage}></img>
         <div class={`slider ${this.disabled && 'slider-disabled'}`}></div>
-        {this.numFillRect.map((value, index) => (
-          <div class={`fill-rect fill-rect-color-${value}`} style={{ bottom: `${index * 10}%` }}></div>
-        ))}
+        <div class="fill-rect-container">
+          {this.numFillRect.map((value, index) => (
+            <div class={`fill-rect fill-rect-color-${value}`} style={{ bottom: `${index * 10}%` }}></div>
+          ))}
+        </div>
       </div>,
       // <div class="buttons">
       //   <button

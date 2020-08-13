@@ -6,7 +6,8 @@ This is a custom element that lets users slide up and down a battery level with 
 
 # Installation
 
-##Angular
+## Angular
+
 Using a Stencil built web component collection within an Angular CLI project is a two-step process. We need to:
 
 Include the CUSTOM_ELEMENTS_SCHEMA in the modules that use the components.
@@ -22,6 +23,14 @@ import 'mindlife-custom-battery-rangeslider';
 
 ```[componentName].page.html
 		<mindlife-battery></mindlife-battery>
+```
+
+# Events
+
+The only emitted event is the value of the slider when it moves `mindlife-battery-value`
+
+```
+  document.addEventListener("mindlife-battery-value",(e)=>{console.log(e)})
 ```
 
 ## Usage

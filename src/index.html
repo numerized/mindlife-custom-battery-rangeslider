@@ -8,6 +8,11 @@
     <script type="module" src="/build/mindlife-custom-battery-rangeslider.esm.js"></script>
     <script nomodule src="/build/mindlife-custom-battery-rangeslider.js"></script>
 
+    
+<script>
+  document.addEventListener("mindlife-battery-value",(e)=>{console.log(e)})
+  </script>
+
   </head>
   <style>
     .mindlife-logo {
@@ -26,11 +31,9 @@
   </style>
 
   <body>
-    <img class="mindlife-logo" src='https://mindlife.net/MINDLIFE_Rest/uploads/1UF8kGtW/Logo%20Wth%20Tagline%20-01.png'></img>,
-    <h1>MINDLIFE BATTERY CUSTOM ELEMENT</h1>,
-    <h3>PLEASE ADJUST THE SLIDER UP AND DOWN ACCORDINGLY YOUR LEVEL OF ENERGY</h3>,
-    <div style="height: 300px; margin-top: 20px;">
+    <img class="mindlife-logo" src='https://mindlife.net/MINDLIFE_Rest/uploads/1UF8kGtW/Logo%20Wth%20Tagline%20-01.png'></img>
+    <h1>MINDLIFE BATTERY CUSTOM ELEMENT</h1>
+    <h3>PLEASE ADJUST THE SLIDER UP AND DOWN ACCORDINGLY YOUR LEVEL OF ENERGY</h3>
       <mindlife-battery value="40" animated-hint="true" disabled="false"></mindlife-battery>
-    </div>
   </body>
 </html>
