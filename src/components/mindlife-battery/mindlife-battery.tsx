@@ -108,9 +108,7 @@ export class mindlifeBattery {
     } else {
       for (let i = Number(this.percentValue) / 10; i >= value / 10; i--) {
         let k = i;
-        console.log(k);
         setTimeout(() => {
-          console.log(i);
           this.slider.noUiSlider.set(k * 10);
         }, (10 - k) * 50);
       }

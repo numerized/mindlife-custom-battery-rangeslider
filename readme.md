@@ -4,6 +4,8 @@
 
 This is a custom element that lets users slide up and down a battery level with options such as animated hint at startup or read-only (disabled) mode to just display a value.
 
+[demo](https://mindlife-ui-toolkit.web.app/components/BatterySlider)
+
 # Installation
 
 ## Angular
