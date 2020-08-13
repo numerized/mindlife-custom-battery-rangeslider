@@ -7,6 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MindlifeBattery {
+        "animatedHint": boolean;
+        "disabled": boolean;
+        "value": number;
     }
 }
 declare global {
@@ -22,7 +25,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface MindlifeBattery {
-        "onSliderSlided"?: (event: CustomEvent<any>) => void;
+        "animatedHint"?: boolean;
+        "disabled"?: boolean;
+        "onMindlifeSliderMoved"?: (event: CustomEvent<any>) => void;
+        "value"?: number;
     }
     interface IntrinsicElements {
         "mindlife-battery": MindlifeBattery;
