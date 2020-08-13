@@ -37,6 +37,15 @@ The only emitted event is the value of the slider when it moves `mindlife-batter
 
 # Properties
 
+Example
 ```
 <mindlife-battery value="40" animated-hint="true" disabled="false"></mindlife-battery>
 ```
+
+`value` is the value watched by the component at initialisation and during execution to force it to a specified value.
+
+`animated-hint` is a boolean value to enable the UX hint that will shake the handle of the slider to hint user that it can be moved.
+
+`disabled` is a boolean value to make the slider read only through the `value` property defined above.
+
+
