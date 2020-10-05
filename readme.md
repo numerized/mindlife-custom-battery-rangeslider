@@ -50,7 +50,7 @@ Example
 <mindlife-battery value="40" animated-hint="true" disabled="false"></mindlife-battery>
 ```
 
-`value` is the value set by the component at initialisation.
+`value` is the value set by the component at initialisation, it's watched at all time so the slider updates itself upon change.
 
 `animated-hint` is a boolean value to enable the UX hint that will shake the handle of the slider to hint user that it can be moved.
 

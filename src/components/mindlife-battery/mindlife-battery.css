@@ -11,36 +11,37 @@ h1 {
   margin-bottom: 30px;
 }
 .slider {
-  z-index: 9999;
+  z-index: 9998;
   margin-top: 75px;
   height: 70%;
   position: absolute;
 }
 
 .battery-img {
-  margin-top: 25px;
+  z-index: 9999;
+  margin-top: 10px;
   z-index: 1;
   height: 100%;
   position: absolute;
-  width: 200px;
+  width: 300px;
+  opacity: 0.5;
 }
 
 .fill-rect {
   position: absolute;
   height: 8%;
-  width: 139px;
+  width: 102px;
   /* margin-bottom: -64px; */
-  border-radius: 3px;
+  border-radius: 8px;
 }
 
 .fill-rect-container {
   margin-top: 55px;
-  z-index: 1;
-  height: 82%;
+  z-index: 0;
+  height: 77%;
   position: absolute;
   display: flex;
   justify-content: center;
-  width: 200px;
 }
 
 .fill-rect-color-1 {
