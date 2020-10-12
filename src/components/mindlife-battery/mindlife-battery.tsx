@@ -14,7 +14,7 @@ export class mindlifeBattery {
   @Prop() value: number = 30;
   @Watch('value')
   watchValueHandler(newValue: number) {
-    this.slider.noUiSlider.set(newValue);
+    this.slider && this.slider.noUiSlider.set(newValue);
   }
 
   @Prop() animatedHint: boolean;
@@ -22,11 +22,9 @@ export class mindlifeBattery {
   @Watch('disabled')
   watchDisabledHandler(newValue: boolean) {
     if (newValue) {
-      console.log('disabling slider')
-      this.slider.setAttribute('disabled', newValue);
+      this.slider && this.slider.setAttribute('disabled', newValue);
     } else {
-      console.log('re-enabling slider')
-      this.slider.removeAttribute('disabled');
+      this.slider && this.slider.removeAttribute('disabled');
     }
   }
 
@@ -140,22 +138,6 @@ export class mindlifeBattery {
           ))}
         </div>
       </div>,
-      // <div class="buttons">
-      //   <button
-      //     onClick={() => {
-      //       this.setBattery(90);
-      //     }}
-      //   >
-      //     SET TO 90
-      //   </button>
-      //   <button
-      //     onClick={() => {
-      //       this.setBattery(20);
-      //     }}
-      //   >
-      //     SET TO 20
-      //   </button>
-      // </div>,
     ];
   }
 }
