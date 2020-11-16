@@ -19,6 +19,7 @@ export class mindlifeBattery {
 
   @Prop() animatedHint: boolean;
   @Prop() disabled: boolean;
+  @Prop() colorSteps: number = 1;
   @Watch('disabled')
   watchDisabledHandler(newValue: boolean) {
     if (newValue) {
@@ -40,7 +41,7 @@ export class mindlifeBattery {
 
   @State() numFillRect = [];
   @State() percentValue;
-
+  @State() colorIndex;
   private slider;
 
   componentWillLoad() {
@@ -134,7 +135,7 @@ export class mindlifeBattery {
         <div class={`slider ${this.disabled && 'slider-disabled'}`}></div>
         <div class="fill-rect-container">
           {this.numFillRect.map((value, index) => (
-            <div class={`fill-rect fill-rect-color-${value}`} style={{ bottom: `${index * 10}%` }}></div>
+            <div class={`fill-rect fill-rect-color-${this.colorSteps !== 0 ? (index -  index % this.colorSteps) : value - 1 }`} style={{ bottom: `${index * 10}%` }}></div>
           ))}
         </div>
       </div>,
