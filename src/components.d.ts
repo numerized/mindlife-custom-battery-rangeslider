@@ -10,6 +10,8 @@ export namespace Components {
         "animatedHint": boolean;
         "colorSteps": number;
         "disabled": boolean;
+        "reversed": boolean;
+        "singleColor": boolean;
         "value": number;
     }
 }
@@ -30,6 +32,8 @@ declare namespace LocalJSX {
         "colorSteps"?: number;
         "disabled"?: boolean;
         "onMindlife-battery-value"?: (event: CustomEvent<any>) => void;
+        "reversed"?: boolean;
+        "singleColor"?: boolean;
         "value"?: number;
     }
     interface IntrinsicElements {
