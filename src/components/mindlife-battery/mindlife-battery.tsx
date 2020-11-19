@@ -22,7 +22,7 @@ export class mindlifeBattery {
   @Prop() animatedHint: boolean;
   @Prop() disabled: boolean;
   @Prop() colorSteps: number = 1;
-  @Prop() singleColor: boolean = false;
+  @Prop() singleColor: boolean = true;
   @Prop() reversed: boolean = false;
   @Prop() container: string = 'battery';
   @Watch('disabled')
@@ -53,7 +53,7 @@ export class mindlifeBattery {
 
 
   componentWillLoad() {
-    this.containerImage = this.container === 'battery' ? batteryImage : containerImage;
+    this.containerImage = this.container === 'container' ? containerImage : batteryImage;
     this.numFillRect = new Array(this.value).fill(this.value);
 
     this.percentValue = this.value;
@@ -112,7 +112,7 @@ export class mindlifeBattery {
   }
 
   onSlide(event) {
-    let IntFromFloat = Math.round(Number(event[0]) / 10);
+    let IntFromFloat = Math.floor(Number(event[0]) / 10);
     this.numFillRect = new Array(IntFromFloat).fill(IntFromFloat);
     this.numFillRect = [...this.numFillRect];
     this.percentValue = Number(Math.round(Number(event[0])).toFixed(0));

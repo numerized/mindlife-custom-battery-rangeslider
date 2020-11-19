@@ -14,7 +14,7 @@
 | `container`    | `container`     |             | `string`  | `'battery'` |
 | `disabled`     | `disabled`      |             | `boolean` | `undefined` |
 | `reversed`     | `reversed`      |             | `boolean` | `false`     |
-| `singleColor`  | `single-color`  |             | `boolean` | `false`     |
+| `singleColor`  | `single-color`  |             | `boolean` | `true`      |
 | `value`        | `value`         |             | `number`  | `30`        |
 
 
