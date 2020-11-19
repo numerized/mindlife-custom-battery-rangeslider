@@ -24,6 +24,7 @@ export class mindlifeBattery {
   @Prop() colorSteps: number = 1;
   @Prop() singleColor: boolean = false;
   @Prop() reversed: boolean = false;
+  @Prop() container: string = 'battery';
   @Watch('disabled')
   watchDisabledHandler(newValue: boolean) {
     if (newValue) {
@@ -41,14 +42,18 @@ export class mindlifeBattery {
   })
   mindlifeSliderMoved: EventEmitter;
 
+
   @Element() private el: HTMLElement;
 
   @State() numFillRect = [];
   @State() percentValue;
   @State() colorIndex;
   private slider;
+  private containerImage;
+
 
   componentWillLoad() {
+    this.containerImage = this.container === 'battery' ? batteryImage : containerImage;
     this.numFillRect = new Array(this.value).fill(this.value);
 
     this.percentValue = this.value;
@@ -135,7 +140,7 @@ export class mindlifeBattery {
   render() {
     return [
       <div class="container">
-        <img class="battery-img" src={containerImage}></img>
+        <img class="battery-img" src={this.containerImage}></img>
         <div class={`slider ${this.disabled && 'slider-disabled'}`}></div>
         <div class="fill-rect-container">
           {this.numFillRect.map((value, index) => (

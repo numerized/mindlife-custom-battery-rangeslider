@@ -9,6 +9,7 @@ export namespace Components {
     interface MindlifeBattery {
         "animatedHint": boolean;
         "colorSteps": number;
+        "container": string;
         "disabled": boolean;
         "reversed": boolean;
         "singleColor": boolean;
@@ -30,6 +31,7 @@ declare namespace LocalJSX {
     interface MindlifeBattery {
         "animatedHint"?: boolean;
         "colorSteps"?: number;
+        "container"?: string;
         "disabled"?: boolean;
         "onMindlife-battery-value"?: (event: CustomEvent<any>) => void;
         "reversed"?: boolean;

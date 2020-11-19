@@ -46,8 +46,9 @@ The only emitted event is the value of the slider when it moves `mindlife-batter
 # Properties
 
 Example
+
 ```
-<mindlife-battery value="40" animated-hint="true" disabled="false"></mindlife-battery>
+      <mindlife-battery value="40" reversed="false" animated-hint="false" disabled="false" single-color="true" color-steps="2" container="battery"></mindlife-battery>
 ```
 
 `value` is the value set by the component at initialisation, it's watched at all time so the slider updates itself upon change.
@@ -56,4 +57,8 @@ Example
 
 `disabled` is a boolean value to make the slider read only through the `value` property defined above.
 
+`single-color` is a boolean value to make the slider show only one color at a time, when true all segments will be the color of the highest value, if false, each segment color will be its own color level.
 
+`color-steps` 1 or 2, this is the number of steps where a segment color changes to another shade
+
+`container` 'battery' or 'container' a battery or a simple container is used
