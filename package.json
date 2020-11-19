@@ -1,6 +1,6 @@
 {
   "name": "mindlife-custom-battery-rangeslider",
-  "version": "0.1.7",
+  "version": "0.2.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
