@@ -62,3 +62,5 @@ Example
 `color-steps` 1 or 2, this is the number of steps where a segment color changes to another shade
 
 `container` 'battery' or 'container' a battery or a simple container is used
+
+`reversed` boolean, if true green is the color at the bottom and go to red at the top.
