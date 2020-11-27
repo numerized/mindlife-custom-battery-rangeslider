@@ -11,10 +11,10 @@
 | -------------- | --------------- | ----------- | --------- | ----------- |
 | `animatedHint` | `animated-hint` |             | `boolean` | `undefined` |
 | `colorSteps`   | `color-steps`   |             | `number`  | `1`         |
-| `container`    | `container`     |             | `string`  | `'battery'` |
+| `container`    | `container`     |             | `string`  | `undefined` |
 | `disabled`     | `disabled`      |             | `boolean` | `undefined` |
 | `reversed`     | `reversed`      |             | `boolean` | `false`     |
-| `singleColor`  | `single-color`  |             | `boolean` | `true`      |
+| `singleColor`  | `single-color`  |             | `boolean` | `false`     |
 | `value`        | `value`         |             | `number`  | `30`        |
 
 

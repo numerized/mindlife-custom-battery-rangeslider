@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>MINDLIFE BATTERY CUSTOM ELEMENT</title>
 
+    <!-- <script src="https://refreshless.com/nouislider/distribute/nouislider.js"></script> -->
+
     <script type="module" src="/build/mindlife-custom-battery-rangeslider.esm.js"></script>
     <script nomodule src="/build/mindlife-custom-battery-rangeslider.js"></script>
+
+    <link href="https://refreshless.com/nouislider/distribute/nouislider.css" rel="stylesheet">
 
     
 <script>
@@ -15,6 +19,9 @@
 
   </head>
   <style>
+    :host{
+      display: block!important;
+    }
     .mindlife-logo {
       height: 50px;
       bottom:20px;
@@ -36,6 +43,6 @@
     <h3>PLEASE ADJUST THE SLIDER UP AND DOWN ACCORDINGLY YOUR LEVEL OF ENERGY</h3>
       <mindlife-battery value="40" reversed="true" animated-hint="false" disabled="false" single-color="true" color-steps="2" container="container"></mindlife-battery>
 
-      <mindlife-battery value="40" reversed="false" animated-hint="false" disabled="false" single-color="true" color-steps="2" container="battery"></mindlife-battery>
+      <mindlife-battery value="40" reversed="false" animated-hint="false" disabled="false"></mindlife-battery>
     </body>
 </html>
