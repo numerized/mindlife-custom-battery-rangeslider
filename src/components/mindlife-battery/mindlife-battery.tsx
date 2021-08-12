@@ -27,8 +27,11 @@ export class mindlifeBattery {
   @Prop() disabled: boolean;
   @Prop() colorSteps: number = 1;
   @Prop() singleColor: boolean = false;
+  @Prop() hueRotate: number;
   @Prop() reversed: boolean = false;
   @Prop() container: string;
+  @Prop() containerOpacity: number;
+
   @Watch('disabled')
   watchDisabledHandler(newValue: boolean) {
     if (newValue) {
@@ -46,7 +49,6 @@ export class mindlifeBattery {
   })
   mindlifeSliderMoved: EventEmitter;
 
-
   @Element() private el: HTMLElement;
 
   @State() numFillRect = [];
@@ -55,23 +57,22 @@ export class mindlifeBattery {
   private slider;
   private containerImage;
 
-
   componentWillLoad() {
 
     console.log('value', this.value)
     this.containerImage = this.container === 'container' ? containerImage : batteryImage;
     this.numFillRect = new Array(this.value).fill(this.value);
-
     this.percentValue = this.value;
+
+    console.log(this.hueRotate);
   }
 
   componentDidLoad() {
-
     this.slider = this.el.shadowRoot.querySelector('div.slider');
 
-    this.slider.querySelectorAll('div.slider').forEach((child)=>{
-      child.classList.add('sc-mindlife-battery')
-    })
+    this.slider.querySelectorAll('div.slider').forEach(child => {
+      child.classList.add('sc-mindlife-battery');
+    });
 
     this.disabled && this.slider.setAttribute('disabled', true);
 
@@ -152,7 +153,11 @@ export class mindlifeBattery {
   render() {
     return [
       <div class="container">
-        <img class="battery-img" src={this.containerImage}></img>
+        <img
+          class="battery-img"
+          src={this.containerImage}
+          style={{ opacity: `${this.containerOpacity}`, filter: `contrast(40%) sepia(${this.hueRotate ? '1' : '0'}) hue-rotate(${this.hueRotate}deg) saturate(1000%)` }}
+        ></img>
         <div class={`slider ${this.disabled && 'slider-disabled'}`}></div>
         <div class="fill-rect-container">
           {this.numFillRect.map((value, index) => (

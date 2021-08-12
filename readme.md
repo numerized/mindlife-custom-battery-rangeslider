@@ -59,8 +59,15 @@ Example
 
 `single-color` is a boolean value to make the slider show only one color at a time, when true all segments will be the color of the highest value, if false, each segment color will be its own color level.
 
+`reversed` boolean, if true, green is the color at the bottom and goes to red at the top.
+
 `color-steps` 1 or 2, this is the number of steps where a segment color changes to another shade
 
 `container` 'battery' or 'container' a battery or a simple container is used
 
-`reversed` boolean, if true green is the color at the bottom and go to red at the top.
+`container-opacity` number from 0 to 1, 0 being fully transparent and 1 being fully opaque
+
+`hue-rotation` number from 0 to 360 following HSL convention like this: 
+
+![HSL Color wheel](https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2015/01/hsl-color-wheel.png)
+
