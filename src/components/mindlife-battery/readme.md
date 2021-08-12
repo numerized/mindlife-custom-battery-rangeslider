@@ -15,7 +15,7 @@
 | `disabled`     | `disabled`      |             | `boolean` | `undefined` |
 | `reversed`     | `reversed`      |             | `boolean` | `false`     |
 | `singleColor`  | `single-color`  |             | `boolean` | `false`     |
-| `value`        | `value`         |             | `number`  | `30`        |
+| `value`        | `value`         |             | `number`  | `undefined` |
 
 
 ## Events
