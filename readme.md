@@ -63,4 +63,10 @@ Example
 
 `container` 'battery' or 'container' a battery or a simple container is used
 
+`container-opacity` number from 0 to 1, 0 being fully transparent and 1 being fully opaque
+
+`hue-rotation` number from 0 to 360 following HSL convention like this: 
+
+![HSL Color wheel](https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2015/01/hsl-color-wheel.png)
+
 `reversed` boolean, if true green is the color at the bottom and go to red at the top.

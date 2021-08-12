@@ -6,7 +6,6 @@ import * as noUiSlider from 'nouislider';
 
 // import 'nouislider/distribute/nouislider.css';
 
-
 const batteryImage =
   'data:image/png;base64,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';
 const containerImage =
@@ -28,8 +27,11 @@ export class mindlifeBattery {
   @Prop() disabled: boolean;
   @Prop() colorSteps: number = 1;
   @Prop() singleColor: boolean = false;
+  @Prop() hueRotate: number;
   @Prop() reversed: boolean = false;
   @Prop() container: string;
+  @Prop() containerOpacity: number;
+
   @Watch('disabled')
   watchDisabledHandler(newValue: boolean) {
     if (newValue) {
@@ -47,7 +49,6 @@ export class mindlifeBattery {
   })
   mindlifeSliderMoved: EventEmitter;
 
-
   @Element() private el: HTMLElement;
 
   @State() numFillRect = [];
@@ -56,21 +57,20 @@ export class mindlifeBattery {
   private slider;
   private containerImage;
 
-
   componentWillLoad() {
     this.containerImage = this.container === 'container' ? containerImage : batteryImage;
     this.numFillRect = new Array(this.value).fill(this.value);
-
     this.percentValue = this.value;
+
+    console.log(this.hueRotate);
   }
 
   componentDidLoad() {
-
     this.slider = this.el.shadowRoot.querySelector('div.slider');
 
-    this.slider.querySelectorAll('div.slider').forEach((child)=>{
-      child.classList.add('sc-mindlife-battery')
-    })
+    this.slider.querySelectorAll('div.slider').forEach(child => {
+      child.classList.add('sc-mindlife-battery');
+    });
 
     this.disabled && this.slider.setAttribute('disabled', true);
 
@@ -150,7 +150,11 @@ export class mindlifeBattery {
   render() {
     return [
       <div class="container">
-        <img class="battery-img" src={this.containerImage}></img>
+        <img
+          class="battery-img"
+          src={this.containerImage}
+          style={{ opacity: `${this.containerOpacity}`, filter: `contrast(40%) sepia(${this.hueRotate ? '1' : '0'}) hue-rotate(${this.hueRotate}deg) saturate(1000%)` }}
+        ></img>
         <div class={`slider ${this.disabled && 'slider-disabled'}`}></div>
         <div class="fill-rect-container">
           {this.numFillRect.map((value, index) => (
